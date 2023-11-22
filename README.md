@@ -13,22 +13,15 @@ npm install --save react-bate-terminal --force
 ## Usage
 
 ```jsx
-import React ,{ useState } from 'react'
-
+import { useState } from 'react'
+import './App.css'
 import { BTerminal } from 'react-bate-terminal'
 
-function myComponent(){
+function App() {
   const [show, setShow] = useState(false)
   const data = [{
     command : "hello",
     output: "world"
-  },
-  {
-    command: "mail",
-    output: () => {/* when you are creating funcion this will execute when your command input
-      like this */
-      alert("hello world!");
-    }
   },
   {
     command : "close",
@@ -42,10 +35,14 @@ function myComponent(){
   const close = () =>{ // command is close and exit this is default 
     setShow(false);
   }
-  
-    return <BTerminal close={close} main="this is main text" data={data} />
-  
+  return (
+    <div>
+      <BTerminal close={close} main="Bate Thar" data={data} />
+    </div>
+  )
 }
+
+export default App
 ```
 
 ## License
