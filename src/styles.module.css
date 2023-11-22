@@ -1,9 +1,198 @@
-/* add css module styles here (optional) */
+.container {
+  max-width: 800px;
+  width: 800px;
+  height: 500px;
+  background-color: #4c4c4c;
+  border-radius: 5px;
+  top: 100px;
+  left: 100px;
+  position: absolute; }
+.container .repoMainContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 345px;
+  width: 100%;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px; }
+.container .repoMainContainer::-webkit-scrollbar {
+  width: 8px; }
+.container .repoMainContainer::-webkit-scrollbar-thumb {
+  cursor: porinter;
+  background-color: #ebdfc6; }
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.icons {
+  width: 20px !important;
+  height: 20px !important; }
+
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.iconContainer:hover {
+  background-color: #7f7f7f; }
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #636363;
+  border-radius: 5px 5px 0px 0px; }
+
+.fullsize {
+  position: absolute !important;
+  top: 25px !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: #4c4c4c; 
 }
+.fullsize .repoMainContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 515px;
+  width: calc(100% + 10px);
+  padding: 0px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 10px;
+  gap: 10px; }
+.fullsize .repoMainContainer::-webkit-scrollbar {
+  width: 8px; }
+.fullsize .repoMainContainer::-webkit-scrollbar-thumb {
+  cursor: porinter;
+  background-color: #ebdfc6; }
+
+.browserContainer {
+  width: 100%;
+  height: 94%; }
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px 30px 10px 20px;
+  border: 3px solid #ebdfc6;
+  box-shadow: 0px 0px 5px #ebdfc6; }
+
+.profileCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  user-select: none; }
+.profileCard .profileBody {
+  width: 80%;
+  margin-top: 40px; }
+.profileCard .profileBody .profileInnerContainer {
+  display: flex; }
+.profileCard .profileBody .profileInnerContainer .profileBtn {
+  width: 130px;
+  border: 1px solid #ebdfc6;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out; }
+.profileCard .profileBody .profileInnerContainer .profileBtn:hover {
+  background-color: #ebdfc6;
+  color: #333; }
+.profileCard .profileBody .repos {
+  text-decoration: underline;
+  font-size: 0.8rem;
+  letter-spacing: 0px; }
+.profileCard .repoCard {
+  width: 100%;
+  margin: 10px;
+  aspect-ratio: 16/9;
+  border: 1px solid #ebdfc6;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; }
+.profileCard .repoCard:hover {
+  background-color: #ebdfc6;
+  color: #333; }
+.profileCard .repoCard:hover .repoName p {
+  color: #333; }
+.profileCard .repoCard:hover .repoDescription {
+  margin: 10px 10px;
+  color: #333; }
+.profileCard .repoCard:hover .repoLang {
+  margin: 5px 10px;
+  color: #333; }
+
+.repoName {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between; }
+
+.repoDescription {
+  margin: 10px 10px; }
+
+.repoLang {
+  display: block;
+  margin: 5px 10px; }
+
+.repoInnerName {
+  transition: 0.3s all ease-in-out; }
+.repoInnerName:hover {
+    text-decoration: underline; }
+
+.btnClone {
+  color: #333;
+  padding: 5px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0px;
+  cursor: pointer;
+  transition: 0.4s all ease-in-out; }
+.btnClone:hover {
+    background-color: #333;
+    color: #edbfc6; }
+
+.profileImageContainer {
+  width: 250px;
+  padding: 10px; }
+.profileImageContainer .profileName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 10px 0px;
+  cursor: pointer; }
+.profileImageContainer .profileName:hover {
+    text-decoration: underline; }
+.profileImageContainer .profileBio {
+  font-size: 1rem;
+  font-weight: 500; }
+
+.profileLocation {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center; }
+
+.profileIcon {
+  width: 15px; }
+
+.terminalInput {
+  width: calc(100% - 17vw);
+  background-color: transparent;
+  border: none;
+  outline: none; }
+  .terminalInput:focus {
+    outline: none; }
+
+.terminalContainer {
+  overflow-y: scroll;
+  height: 90%; }
+.terminalContainer::-webkit-scrollbar {
+  width: 8px; }
+.terminalContainer::-webkit-scrollbar-thumb {
+  cursor: porinter;
+  background-color: #ebdfc6; }
