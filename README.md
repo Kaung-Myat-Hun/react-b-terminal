@@ -24,7 +24,7 @@ function myComponent(){
     command : "hello",
     output: "world"
   }]
-  const close = () =>{
+  const close = () =>{ // command is close and exit this is default 
     setShow(false);
   }
   render() {

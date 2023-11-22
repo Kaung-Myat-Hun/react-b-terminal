@@ -1,10 +1,16 @@
 import {useState, Fragment} from 'react'
 import React from 'react'
-import styles from './styles.module.css'
 
 export const BTerminal = (props) =>{
   return (
-      <div className={styles.container}>
+      <div style={{
+        "color" : "lime",
+        "max-width": "100%",
+        "width": "100%",
+        "height": "500px",
+        "backgroundColor": "#4c4c4c",
+        "border-radius": "5px",
+      }}>
         <TerminalComponent main={props.main} data={props.data} close={props.close} />
       </div>
   )
@@ -122,23 +128,45 @@ const TerminalComponent = ({main ,data,close}) => {
     setInputData(e.target.value)
   }
   return (
-    <div className={styles.terminalContainer}>
-      <div className={styles.terminalbox}>
+    <div style={{
+      "color" : "lime",
+      "overflowY": "scrol",
+      "height": "90%"
+    }}>
+      <div >
         <code>Welcome to {mainText} Terminal {'!'} </code>
       </div>
       {terminalData.length === 0 && (
-        <form className={styles.terminalbox} onSubmit={submitTerminal}>
+        <form onSubmit={submitTerminal}>
             <code>~ {mainText}: {'$'} </code> 
-            <input type="text" className={styles.terminalInput} onChange={inputHandler} autoFocus={true} />
+            <input type="text" style={{
+              "color" : "lime",
+              "width": "calc(100% - 17vw)",
+              "backgroundColor": "transparent",
+              "border": "none",
+              "outline": "none",
+              "focus" : {
+                "outline": "none"
+              }
+            }} onChange={inputHandler} autoFocus={true} />
         </form>
       )}
       {
         terminalData.length > 0 && (
           terminalData.map((item) =>(
-            <form key={item.id} className={styles.terminalbox} onSubmit={submitTerminal}>
+            <form key={item.id} onSubmit={submitTerminal}>
               <code>~ {item.text}: {'$'} </code> 
               {item.id === terminalData[terminalData.length-1].id ? (
-                <input type="text" className={styles.terminalInput} onChange={inputHandler} autoFocus={true} />
+                <input type="text" style={{
+                  "color" : "lime",
+                  "width": "calc(100% - 17vw)",
+                  "backgroundColor": "transparent",
+                  "border": "none",
+                  "outline": "none",
+                  "focus" : {
+                    "outline": "none"
+                  }
+                }} onChange={inputHandler} autoFocus={true} />
               ) : (
                 <span>{item.inputText}</span>
               )}
