@@ -42,9 +42,9 @@ function myComponent(){
   const close = () =>{ // command is close and exit this is default 
     setShow(false);
   }
-  render() {
+  
     return <BTerminal close={close} main="this is main text" data={data} />
-  }
+  
 }
 ```
 
