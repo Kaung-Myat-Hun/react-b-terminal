@@ -13,9 +13,9 @@ npm install --save react-b-terminal
 ## Usage
 
 ```jsx
-import React, { BTerminal } from 'react'
+import React ,{ useState } from 'react'
 
-import MyComponent from 'react-b-terminal'
+import BTerminal from 'react-b-terminal'
 import 'react-b-terminal/dist/index.css'
 
 function myComponent(){
