@@ -25,6 +25,13 @@ function myComponent(){
     output: "world"
   },
   {
+    command: "mail",
+    output: () => {/* when you are creating funcion this will execute when your command input
+      like this */
+      alert("hello world!");
+    }
+  },
+  {
     command : "close",
     output: "close"
   },
