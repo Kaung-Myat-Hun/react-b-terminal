@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-b-terminal
+npm install --save react-bate-terminal --force
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save react-b-terminal
 ```jsx
 import React ,{ useState } from 'react'
 
-import { BTerminal } from 'react-b-terminal'
+import { BTerminal } from 'react-bate-terminal'
 import 'react-b-terminal/dist/index.css'
 
 function myComponent(){
