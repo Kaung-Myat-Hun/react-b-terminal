@@ -16,7 +16,6 @@ npm install --save react-bate-terminal --force
 import React ,{ useState } from 'react'
 
 import { BTerminal } from 'react-bate-terminal'
-import 'react-bate-terminal/dist/index.css'
 
 function myComponent(){
   const [show, setShow] = useState(false)
