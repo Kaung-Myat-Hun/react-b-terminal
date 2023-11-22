@@ -1,5 +1,4 @@
-import {useState, Fragment} from 'react'
-import React from 'react'
+import React,{useState, Fragment} from 'react'
 
 export const BTerminal = (props) =>{
   return (
