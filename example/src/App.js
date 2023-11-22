@@ -46,7 +46,7 @@ const App = () => {
     setShow(false)
   }
   return (
-    <>
+    <>  
       <button onClick={()=> setShow(true)}>show</button>
       {show && <BTerminal close={close} data={commands} main="Bate Thar" />}
     </>
