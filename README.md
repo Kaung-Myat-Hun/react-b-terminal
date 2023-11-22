@@ -23,7 +23,16 @@ function myComponent(){
   const data = [{
     command : "hello",
     output: "world"
-  }]
+  },
+  {
+    command : "close",
+    output: "close"
+  },
+  {
+    command : "help",
+    output : "this is help message for your terminal"
+  }
+  ]
   const close = () =>{ // command is close and exit this is default 
     setShow(false);
   }
