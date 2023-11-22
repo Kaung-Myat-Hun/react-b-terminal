@@ -13,14 +13,22 @@ npm install --save react-b-terminal
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { BTerminal } from 'react'
 
 import MyComponent from 'react-b-terminal'
 import 'react-b-terminal/dist/index.css'
 
-class Example extends Component {
+function myComponent(){
+  const [show, setShow] = useState(false)
+  const data = [{
+    command : "hello",
+    output: "world"
+  }]
+  const close = () =>{
+    setShow(false);
+  }
   render() {
-    return <MyComponent />
+    return <BTerminal close={close} main="this is main text" data={data} />
   }
 }
 ```
